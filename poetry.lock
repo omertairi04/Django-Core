@@ -21,6 +21,28 @@ optional = false
 python-versions = ">=3.8"
 
 [[package]]
+name = "colorama"
+version = "0.4.6"
+description = "Cross-platform colored terminal text."
+category = "dev"
+optional = false
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7"
+
+[[package]]
+name = "colorlog"
+version = "6.8.2"
+description = "Add colours to the output of Python's logging module."
+category = "dev"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+colorama = {version = "*", markers = "sys_platform == \"win32\""}
+
+[package.extras]
+development = ["black", "flake8", "mypy", "pytest", "types-colorama"]
+
+[[package]]
 name = "distlib"
 version = "0.3.8"
 description = "Distribution utilities"
@@ -264,11 +286,13 @@ test = ["covdefaults (>=2.3)", "coverage-enable-subprocess (>=1)", "coverage (>=
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "d008d6cfde152725b3d93d82402691328a4dcdad279e8430fcb91b421c69a404"
+content-hash = "5f9876284420073e0316f24315d8369deb10bc6aa0e110624620240468906ccf"
 
 [metadata.files]
 asgiref = []
 cfgv = []
+colorama = []
+colorlog = []
 distlib = []
 django = []
 django-filter = []
