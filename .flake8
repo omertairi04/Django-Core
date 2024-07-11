@@ -1,5 +1,5 @@
 [flake8]
-ignore = C101,D403,F403,F405,I100,I201,W503,W504,W293 
+ignore = C101,D403,F403,F405,I100,I201,W503,W504,W293
 exclude =
     **/migrations/*,
     .git,
@@ -15,4 +15,3 @@ max-line-length = 119
 multiline-quotes = double
 per-file-ignores =
     cooking_core/project/settings/templates/settings.dev.py:F821
-
